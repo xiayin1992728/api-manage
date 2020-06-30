@@ -18,7 +18,7 @@ switch($op){
                 $sql = "insert into cate (cname,cdesc,addtime) values('{$cname}','{$cdesc}','{$time}')";
                 $re = insert($sql);
                 if($re){
-                    go(U());
+                    my_go(U());
                 }else{
                     echo '<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> 分类添加失败</div>';
                 }
@@ -33,7 +33,7 @@ switch($op){
         $sql = "update cate set isdel=1 where aid='{$aid}'";
         $re = update($sql);
         if($re){
-            go(U());
+            my_go(U());
         }else{
             echo '<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> 分类删除失败</div>';
         }
@@ -45,7 +45,7 @@ switch($op){
             $sql = "update cate set cname='{$_VAL['cname']}',cdesc='{$_VAL['cdesc']}' where aid='{$_VAL['aid']}'";
             $re = update($sql);
             if($re !== false){
-                go(U());
+                my_go(U());
             }else{
                 echo '<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> 分类修改失败</div>';
             }

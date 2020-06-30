@@ -164,7 +164,7 @@
     }
 
     //跳转
-    function go($url){
+    function my_go($url){
         $gourl = '<script language="javascript" type="text/javascript">window.location.href="'.$url.'"</script>';
         die($gourl) ;
     }

@@ -20,7 +20,7 @@
                 $sql = "update user set login_pwd='{$new_pwd}' where login_name='{$login_name}'";
                 $re = update($sql);
                 if($re !== false){
-                    go(U());
+                    my_go(U());
                 }else{
                     echo '<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> 密码修改失败</div>';
                 }

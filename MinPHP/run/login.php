@@ -17,7 +17,7 @@
             $time = time();
             $sql = "update user set last_time = '{$time}' where id = {$info['id']}";
             update($sql);
-            go(U());
+            my_go(U());
         }else{
             echo '<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> 登录失败,帐号或密码错误</div>';
         }
@@ -25,7 +25,7 @@
     }if($type == 'quit'){
         session('login_name','');
         session('issupper','');
-        go(U());
+        my_go(U());
     }
 ?>
 <div style="border:1px solid #ddd">

@@ -19,7 +19,7 @@
             $ord--;
         }
         $url = U(array('act'=>'api','tag'=>$_GET['tag']));
-        go($url);
+        my_go($url);
     }
 ?>
 <div style="border:1px solid #ddd;margin-bottom:20px;">
